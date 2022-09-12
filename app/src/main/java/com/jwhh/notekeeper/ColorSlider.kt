@@ -65,7 +65,7 @@ class ColorSlider @JvmOverloads  constructor(context: Context,
                         val h2 = drawable?.intrinsicHeight ?: 0
                         val halfW2 = if (w2 >= 0) w / 2 else 1
                         val halfH2 = if (h2 >= 0) w / 2 else 1
-                        drawable?.setBounds(-halfW2, -halfH2, halfW2 as Int, halfH2 as Int)
+                        drawable?.setBounds(-halfW2.toInt(), -halfH2.toInt(), halfW2 as Int, halfH2 as Int)
                         drawable?.draw(canvas)
                     } else {
                         val paint = Paint()
